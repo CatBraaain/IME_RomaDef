@@ -38,8 +38,18 @@ Sub makeRomaDef()
             jpFirstChrArr = jpFirstChrArrDict(enFirstChr)
             jpChrDict.Add enSecondChrArr(i), jpFirstChrArr(jpFirstChrIndexArr(i)) + jpSecondChrArr(i)
         Next
-        If InStr("あぁやゃわくぁじゃふぁヴぁ", jpFirstChrArrDict(enFirstChr)(1)) = 0 Then
+        If InStr("かがさざただなばぱまら", jpFirstChrArrDict(enFirstChr)(1)) > 0 Then
             For i = 5 To 19
+                jpFirstChrArr = jpFirstChrArrDict(enFirstChr)
+                jpChrDict.Add enSecondChrArr(i), jpFirstChrArr(jpFirstChrIndexArr(i)) + jpSecondChrArr(i)
+            Next
+        End If
+        If InStr("は", jpFirstChrArrDict(enFirstChr)(1)) > 0 Then
+            For i = 5 To 9
+                jpFirstChrArr = jpFirstChrArrDict(enFirstChr)
+                jpChrDict.Add enSecondChrArr(i), jpFirstChrArr(jpFirstChrIndexArr(i)) + jpSecondChrArr(i)
+            Next
+            For i = 15 To 19
                 jpFirstChrArr = jpFirstChrArrDict(enFirstChr)
                 jpChrDict.Add enSecondChrArr(i), jpFirstChrArr(jpFirstChrIndexArr(i)) + jpSecondChrArr(i)
             Next
